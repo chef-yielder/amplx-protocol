@@ -1,0 +1,30 @@
+{
+  "name": "hotpot-protocol",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "truffle test",
+    "coverage": "truffle run coverage",
+    "clean": "rimraf build",
+    "prebuild": "npm run clean",
+    "build": "truffle compile",
+    "start": "ganache-cli --gasLimit 8000000"
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "ethers": "^5.0.13",
+    "ganache-cli": "6.10.2",
+    "rimraf": "^3.0.2",
+    "solidity-coverage": "^0.7.10"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.2.0",
+    "@openzeppelin/test-helpers": "^0.5.6",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "truffle": "^5.1.44",
+    "truffle-flattener": "^1.5.0"
+  }
+}

@@ -1,0 +1,17 @@
+version: 2
+jobs:
+    build:
+        working_directory: /home/circleci/casval-server
+        docker:
+            - image: circleci/node:10.19.0
+        steps:
+            - checkout
+            - run:
+                  name: Install npm
+                  command: npm install
+            - run:
+                  name: coverage
+                  command: npm run coverage
+            - run:
+                  name: post coverage
+                  command: cat ./coverage/lcov.info | ./node_modules/.bin/coveralls
